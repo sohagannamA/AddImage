@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-     "start": "node server.js",  // প্রোডাকশন start কমান্ড
-    "dev": "nodemon server.js"  // ডেভেলপমেন্ট start কমান্ড
+     "start": "node index.js",  // প্রোডাকশন start কমান্ড
+    "dev": "nodemon index.js"  // ডেভেলপমেন্ট start কমান্ড
   },
   "keywords": [],
   "author": "",
