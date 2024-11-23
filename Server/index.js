@@ -16,7 +16,7 @@ app.use("/Image", express.static(path.join(__dirname, "/Image")));
 
 
 
-const port = 300;
+const port = 3000;
 const host = "127.0.0.1";
 
 const dataConect = async () => {
