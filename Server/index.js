@@ -13,12 +13,7 @@ const fs = require("fs");
 // app.use("/Image",express.static(path.join(__dirname,"/Image")));
 app.use("/Image", express.static(path.join(__dirname, "/Image")));
 
-
-<<<<<<< HEAD
-=======
-
 const port = 3000;
->>>>>>> 8318138570295519018fe6d954df52caaba0b724
 const host = "127.0.0.1";
 const port = process.env.PORT || 4000
 const dataConect = async () => {
