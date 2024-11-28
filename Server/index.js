@@ -13,7 +13,10 @@ const fs = require("fs");
 // app.use("/Image",express.static(path.join(__dirname,"/Image")));
 app.use("/Image", express.static(path.join(__dirname, "/Image")));
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6494623bd444a585f91841800d2e1b2db16f51f4
 const host = "127.0.0.1";
 const port = process.env.PORT || 4000
 const Connect=process.env.Connect;
