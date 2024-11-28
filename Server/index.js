@@ -14,24 +14,21 @@ const fs = require("fs");
 app.use("/Image", express.static(path.join(__dirname, "/Image")));
 
 
-<<<<<<< HEAD
-=======
-
-const port = 3000;
->>>>>>> 8318138570295519018fe6d954df52caaba0b724
 const host = "127.0.0.1";
 const port = process.env.PORT || 4000
-const dataConect = async () => {
+const Connect=process.env.Connect;
+const dataConnect = async () => {
     try {
-        const connect = await mongoose.connect("mongodb://localhost:27017/imageUplode");
+        const connect = await mongoose.connect(Connect);
+
         if (connect) {
-            console.log("Db connect successful");
+            console.log("MongoDB Atlas connected successfully!");
             return;
         }
     } catch (error) {
-        console.log(error);
+        console.error("Error connecting to MongoDB Atlas:", error);
     }
-}
+};
 
 
 
@@ -108,7 +105,7 @@ app.delete("/imageDelete/:id", async(req,res) => {
 
 app.listen(port, host, async () => {
     console.log(`Your server is runnning at http://${host}:${port}`);
-    await dataConect();
+    await dataConnect();
 });
 
 
