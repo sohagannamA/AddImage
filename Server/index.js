@@ -14,7 +14,7 @@ require('dotenv').config();
 app.use("/Image", express.static(path.join(__dirname, "/Image")));
 
 
-const host = "127.0.0.1";
+const host = "0.0.0.0";
 const port = process.env.PORT || 4000
 const Connect=process.env.Connect;
 console.log(port)

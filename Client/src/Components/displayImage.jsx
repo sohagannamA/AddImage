@@ -5,7 +5,7 @@ export default function DisplayImage({ allimge, displayImage }) {
     const handleDelete = async (id) => {
         try {
             console.log(`Deleting image with id: ${id}`);
-            const response = await axios.delete(`http://127.0.0.1:4000/imageDelete/${id}`);
+            const response = await axios.delete(`https://addimage.onrender.com/imageDelete/${id}`);
             await displayImage();
             console.log("Display image check"+displayImage());
         } catch (error) {
