@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 const fs = require("fs");
-
+require('dotenv').config();
 // app.use("/Image",express.static(path.join(__dirname,"/Image")));
 app.use("/Image", express.static(path.join(__dirname, "/Image")));
 
@@ -17,6 +17,7 @@ app.use("/Image", express.static(path.join(__dirname, "/Image")));
 const host = "127.0.0.1";
 const port = process.env.PORT || 4000
 const Connect=process.env.Connect;
+console.log(Connect)
 const dataConnect = async () => {
     try {
         const connect = await mongoose.connect(Connect);
