@@ -17,7 +17,7 @@ app.use("/Image", express.static(path.join(__dirname, "/Image")));
 const host = "127.0.0.1";
 const port = process.env.PORT || 4000
 const Connect=process.env.Connect;
-console.log(Connect)
+console.log(port)
 const dataConnect = async () => {
     try {
         const connect = await mongoose.connect(Connect);
