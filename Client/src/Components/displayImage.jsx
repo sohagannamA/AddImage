@@ -18,7 +18,7 @@ export default function DisplayImage({ allimge, displayImage }) {
             {allimge.map((image, index) => (
                 <div className="display_image_box" key={index}>
                     <div className="each_image_box">
-                        <img src={`http://localhost:4000/Image/${image.userImage}`} alt="User" />
+                        <img src={`https://addimage.onrender.com/Image/${image.userImage}`} alt="User" />
                     </div>
                     <div className="image_status">
                         <button type="button" onClick={() => handleDelete(image._id)}>Delete</button>
