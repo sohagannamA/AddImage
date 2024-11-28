@@ -31,7 +31,7 @@ export default function Image() {
         formData.append("userImage", userImage);
 
         try {
-            const response = await axios.post("http://127.0.0.1:4000/imageUplode", formData, {
+            const response = await axios.post("https://addimage.onrender.com/imageUplode", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
@@ -49,7 +49,7 @@ export default function Image() {
     const displayImage = async () => {
         try {
             console.log("Fetching images...");
-            const response = await axios.get("http://127.0.0.1:4000/imageUplode");
+            const response = await axios.get("https://addimage.onrender.com/imageUplode");
             if (response.status === 200) {
                 console.log("Images fetched successfully:", response.data);
                 setAllimage(response.data);
